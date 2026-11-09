@@ -1,0 +1,19 @@
+vaquinha's bar foguinho, foguinho
+
+
+
+
+crie um site para um bar com uma tela inicial simples e intuitiva que posue uma barra superior onde o usuario podera ter a posibilidade de navegar 
+para as demais abas do site e tambem tendo um icone na lateral esquerda onde ficara o icone do perfil da pessoa que estiver usando o site, ainda 
+na tela inicial coloque algumas propagandas de algumas bebidas e guloseimas que são vendidas no bar e tambem adicione na parte superior abas como 
+inicio (para voltar a tela inicial) uma aba que mostar tudo oque é vendido no bar e tambem uma parte para calcular o que você comprou fiado no caso
+mostrando quanto você deve ao dono.
+gostaria que nesse site tivese uma parte adicional de entregas onde as pessoas poderiam encomendar produtos do bar
+
+sobre a estetica do site gostaria de um site estilo tavernas medievais com uma estetica classica ou algo que remeta a jazz e blues.
+
+me mande isso em um arquivo de html css e java para vscode
+
+gostaria de mudar algumas coisas o nome do site tem que ser: Vaquinha's bar
+
+gostaria que o codigo passase por uma refinagem quero voce possa cancelar as coisas sem colocar informaçoes e apresente o site para pessoas novas

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#171b22" />
+  <meta name="description" content="Vaquinha's Bar — bebidas, petiscos, fiado e entregas." />
+  <title>Vaquinha's Bar | Bar &amp; Petiscos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Perfil e atalhos">
+      <a class="brand-mark" href="#inicio" data-page-link="inicio" aria-label="Vaquinha's Bar - início">
+        <span class="brand-icon">♬</span>
+        <span class="brand-name">Vaquinha's<br><em>Bar</em></span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <button class="profile-card" id="profileButton" type="button" aria-label="Editar perfil">
+        <span class="avatar" id="avatarInitials">MV</span>
+        <span class="profile-copy">
+          <strong id="profileName">Viajante</strong>
+          <small>Cliente da casa</small>
+        </span>
+        <span class="edit-icon" aria-hidden="true">✎</span>
+      </button>
+
+      <div class="sidebar-label">SUA CONTA</div>
+      <div class="debt-mini-card">
+        <span class="mini-card-icon">▤</span>
+        <span class="mini-card-copy"><small>Seu fiado</small><strong id="sidebarDebt">R$ 0,00</strong></span>
+        <span class="debt-dot" aria-hidden="true"></span>
+      </div>
+
+      <div class="sidebar-note">
+        <span class="note-star">✦</span>
+        <p>“Boa música,<br>boa companhia<br>e copo cheio.”</p>
+        <small>— Sabedoria da casa</small>
+      </div>
+
+      <div class="sidebar-bottom">
+        <span class="open-indicator"></span>
+        <span>A casa está pronta<br><small>para receber você</small></span>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <div class="mobile-brand"><span>♬</span> Vaquinha's <em>Bar</em></div>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <button class="nav-link active" data-page="inicio" type="button">Início</button>
+          <button class="nav-link" data-page="produtos" type="button">Cardápio</button>
+          <button class="nav-link" data-page="fiado" type="button">Meu fiado</button>
+          <button class="nav-link" data-page="entregas" type="button">Entregas</button>
+        </nav>
+        <button class="cart-button" id="cartShortcut" type="button" aria-label="Abrir entregas e carrinho">
+          <span aria-hidden="true">♧</span><span class="cart-label">Minha sacola</span><b id="cartCount">0</b>
+        </button>
+      </header>
+
+      <main id="mainContent">
+        <!-- INÍCIO -->
+        <section class="page active" id="page-inicio" aria-labelledby="homeTitle">
+          <div class="welcome-row">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-line"></span> DESDE O PRIMEIRO GOLE</p>
+              <h1 id="homeTitle">Onde a noite<br><em>ganha história.</em></h1>
+              <p class="welcome-text">Entre, escolha seu clássico e aproveite o melhor da casa. A boa conversa é por nossa conta.</p>
+              <div class="hero-actions">
+                <button class="button button-gold" data-go="produtos" type="button">Explorar cardápio <span>→</span></button>
+                <button class="button button-muted" id="openGuideButton" type="button">Como funciona?</button>
+                <span class="hero-caption">✦ Música boa &amp; tradição</span>
+              </div>
+            </div>
+            <div class="hero-art" aria-label="Ilustração de um copo de cerveja em uma taverna">
+              <div class="art-ring ring-one"></div><div class="art-ring ring-two"></div>
+              <div class="art-moon">☾</div>
+              <div class="beer-glass"><div class="beer-foam"></div><div class="beer-liquid"></div><div class="glass-shine"></div></div>
+              <div class="art-leaf leaf-left">❧</div><div class="art-leaf leaf-right">❧</div>
+              <span class="art-caption">THE HOUSE<br>SPECIAL</span>
+            </div>
+          </div>
+
+          <div class="section-heading promo-heading">
+            <div><p class="eyebrow">ESCOLHAS DA CASA</p><h2>Convites para ficar</h2></div>
+            <button class="text-link" data-go="produtos" type="button">Ver cardápio completo <span>↗</span></button>
+          </div>
+          <div class="promo-grid" id="featuredProducts"></div>
+
+          <section class="house-banner">
+            <div class="banner-symbol">♫</div>
+            <div><p class="eyebrow">UM BRINDE AOS BONS MOMENTOS</p><h2>O clássico nunca sai de moda.</h2><p>Petiscos preparados com carinho, bebidas geladas e aquele clima que só o Vaquinha's Bar tem.</p></div>
+            <button class="button button-outline" data-go="entregas" type="button">Peça em casa <span>→</span></button>
+          </section>
+          <p class="age-note">Beba com responsabilidade. Venda e consumo de bebidas alcoólicas são permitidos apenas para maiores de 18 anos.</p>
+        </section>
+
+        <!-- CARDÁPIO -->
+        <section class="page" id="page-produtos" aria-labelledby="productsTitle">
+          <div class="page-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> O QUE SAI DA COZINHA E DO BALCÃO</p>
+            <h1 id="productsTitle">Nosso <em>cardápio</em></h1>
+            <p>Dos clássicos gelados aos petiscos para compartilhar. Escolha seus favoritos.</p>
+          </div>
+          <div class="catalog-toolbar">
+            <div class="filter-pills" id="categoryFilters" aria-label="Filtrar produtos">
+              <button class="filter-pill active" data-category="Todos" type="button">Tudo</button>
+              <button class="filter-pill" data-category="Bebidas" type="button">Bebidas</button>
+              <button class="filter-pill" data-category="Drinks" type="button">Drinks</button>
+              <button class="filter-pill" data-category="Petiscos" type="button">Petiscos</button>
+              <button class="filter-pill" data-category="Doces" type="button">Doces</button>
+            </div>
+            <label class="search-box"><span aria-hidden="true">⌕</span><input id="productSearch" type="search" placeholder="Buscar no cardápio..." aria-label="Buscar produtos"></label>
+          </div>
+          <div class="product-grid" id="allProducts"></div>
+        </section>
+
+        <!-- FIADO -->
+        <section class="page" id="page-fiado" aria-labelledby="debtTitle">
+          <div class="page-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> CONTA DA CASA</p>
+            <h1 id="debtTitle">Meu <em>fiado</em></h1>
+            <p>Transparência é tradição. Acompanhe aqui suas compras anotadas e os pagamentos.</p>
+          </div>
+          <div class="debt-overview">
+            <div class="debt-balance-card">
+              <div class="balance-top"><span>✦ SALDO EM ABERTO</span><span class="balance-icon">▤</span></div>
+              <strong id="debtBalance">R$ 0,00</strong>
+              <small>Este é o valor registrado em seu nome.</small>
+            </div>
+            <div class="debt-info-card"><span class="info-icon">♧</span><div><strong>Conta sempre à vista</strong><p>Confira cada lançamento no histórico. Em caso de divergência, fale diretamente com o responsável pelo bar.</p></div></div>
+          </div>
+          <div class="ledger-header"><div><p class="eyebrow">MOVIMENTAÇÕES</p><h2>Histórico da conta</h2></div><button class="button button-small button-dark" id="addDebtButton" type="button">＋ Anotar compra</button></div>
+          <div class="ledger-card" id="debtLedger"></div>
+          <div class="pay-panel"><div><span class="pay-icon">✧</span><div><strong>Já acertou sua conta?</strong><p>Registre um pagamento para atualizar seu saldo demonstrativo.</p></div></div><button class="button button-gold" id="payDebtButton" type="button">Registrar pagamento</button></div>
+          <p class="demo-warning">Aviso: este controle é demonstrativo e fica salvo somente neste navegador. Ele não substitui a conferência oficial do estabelecimento.</p>
+        </section>
+
+        <!-- ENTREGAS -->
+        <section class="page" id="page-entregas" aria-labelledby="deliveryTitle">
+          <div class="page-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> VAQUINHA'S BAR VAI ATÉ VOCÊ</p>
+            <h1 id="deliveryTitle">Peça sua <em>entrega</em></h1>
+            <p>Escolha seus produtos, informe onde está e deixe o resto com a gente.</p>
+          </div>
+          <div class="delivery-layout">
+            <div class="delivery-form-wrap">
+              <div class="delivery-step-title"><span>01</span><div><strong>Seus dados</strong><small>Para sabermos onde entregar</small></div></div>
+              <form id="deliveryForm" class="delivery-form">
+                <label>Nome completo<input type="text" id="customerName" placeholder="Como podemos chamar você?" required maxlength="70"></label>
+                <div class="form-two-cols"><label>Telefone / WhatsApp<input type="tel" id="customerPhone" placeholder="(00) 00000-0000" required maxlength="20"></label><label>CEP<input type="text" id="customerZip" placeholder="00000-000" maxlength="9"></label></div>
+                <label>Endereço e número<input type="text" id="customerAddress" placeholder="Rua, avenida, número..." required maxlength="120"></label>
+                <div class="form-two-cols"><label>Bairro<input type="text" id="customerNeighborhood" placeholder="Seu bairro" required maxlength="70"></label><label>Complemento <small>(opcional)</small><input type="text" id="customerComplement" placeholder="Casa, ap., referência..." maxlength="70"></label></div>
+                <label>Observações do pedido<textarea id="customerNotes" rows="3" placeholder="Algum detalhe para a entrega?"></textarea></label>
+                <div class="delivery-step-title second-step"><span>02</span><div><strong>Resumo do pedido</strong><small>Confira antes de enviar</small></div></div>
+                <div class="checkout-head"><span>Itens da sacola</span><button class="text-link clear-cart-button" id="clearCartButton" type="button" disabled>Esvaziar sacola</button></div>
+                <div id="checkoutItems" class="checkout-items"><p class="empty-message">Sua sacola está vazia. Adicione produtos pelo cardápio.</p></div>
+                <div class="checkout-total"><span>Total dos produtos</span><strong id="checkoutTotal">R$ 0,00</strong></div>
+                <p class="delivery-disclaimer">O envio deste formulário registra uma solicitação demonstrativa neste navegador. Para confirmar a entrega, o estabelecimento precisa entrar em contato com você.</p>
+                <div class="delivery-form-actions">
+                  <button class="button button-muted" id="cancelDeliveryButton" type="button">Cancelar preenchimento</button>
+                  <button class="button button-gold submit-order" type="submit">Enviar solicitação <span>→</span></button>
+                </div>
+              </form>
+            </div>
+            <aside class="delivery-aside">
+              <div class="takeaway-art"><span>♬</span><p>GOOD TIMES<br>COME TO YOU</p><small>VAQUINHA'S DELIVERY</small></div>
+              <h3>Da nossa casa<br>para a sua.</h3>
+              <p>Monte sua sacola com os sabores do Vaquinha's Bar. Os detalhes de taxa e prazo de entrega serão combinados com o estabelecimento.</p>
+              <button class="text-link" data-go="produtos" type="button">Escolher produtos <span>↗</span></button>
+            </aside>
+          </div>
+          <div class="orders-section"><div class="section-heading"><div><p class="eyebrow">SEUS PEDIDOS</p><h2>Solicitações recentes</h2></div></div><div id="orderHistory" class="order-history"><p class="empty-message">Você ainda não fez solicitações por aqui.</p></div></div>
+        </section>
+      </main>
+
+      <footer class="site-footer"><span>♬ VAQUINHA'S BAR</span><span>Feito para bons encontros <b>✦</b></span><span>© <span id="currentYear"></span> Vaquinha's Bar</span></footer>
+    </div>
+  </div>
+
+  <!-- Modal reutilizado para perfil e lançamentos -->
+  <dialog class="app-dialog" id="appDialog">
+    <form method="dialog" class="dialog-card" id="dialogForm">
+      <button class="dialog-close" type="button" data-dialog-cancel aria-label="Fechar">×</button>
+      <p class="eyebrow" id="dialogEyebrow">VAQUINHA'S BAR</p>
+      <h2 id="dialogTitle">Detalhes</h2>
+      <div id="dialogContent"></div>
+      <div class="dialog-actions" id="dialogActions"></div>
+    </form>
+  </dialog>
+
+  <!-- Apresentação para quem visita o site pela primeira vez -->
+  <dialog class="app-dialog welcome-dialog" id="welcomeDialog" aria-labelledby="welcomeTitle">
+    <div class="dialog-card welcome-card">
+      <button class="dialog-close" id="closeWelcomeButton" type="button" aria-label="Fechar apresentação">×</button>
+      <p class="eyebrow">SEJA BEM-VINDO À CASA</p>
+      <h2 id="welcomeTitle">Entre, fique à vontade.</h2>
+      <p class="welcome-intro">O Vaquinha's Bar reúne o clima de uma boa taverna com a praticidade de fazer tudo pelo site. Veja como aproveitar:</p>
+      <div class="guide-steps">
+        <article class="guide-step"><span>01</span><div><strong>Explore o cardápio</strong><p>Confira bebidas, drinks, petiscos e doces. Adicione seus favoritos à sacola.</p></div></article>
+        <article class="guide-step"><span>02</span><div><strong>Peça para entregar</strong><p>Abra Entregas, revise a sacola e preencha os dados somente quando quiser enviar o pedido.</p></div></article>
+        <article class="guide-step"><span>03</span><div><strong>Acompanhe seu fiado</strong><p>Consulte os lançamentos e os pagamentos anotados no controle demonstrativo.</p></div></article>
+        <article class="guide-step"><span>04</span><div><strong>Personalize seu perfil</strong><p>Clique no avatar ao lado para informar como devemos chamar você. É opcional para conhecer o site.</p></div></article>
+      </div>
+      <p class="welcome-footnote">Você pode navegar e conhecer tudo sem preencher cadastro. Os pedidos só são registrados quando você confirma o envio.</p>
+      <div class="dialog-actions welcome-actions">
+        <button class="button button-muted" id="skipWelcomeButton" type="button">Agora não</button>
+        <button class="button button-gold" id="welcomeMenuButton" type="button">Ver o cardápio <span>→</span></button>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
